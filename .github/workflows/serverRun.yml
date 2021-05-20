@@ -1,0 +1,19 @@
+name: Try to run server
+
+
+on: [push, pull_request_target]
+
+jobs:
+  build-and-run-server:
+    name: Run server for 10 seconds
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-go@v2
+      with:
+        go-version: '^1.16.3'
+    - run: ls -la
+    - run: cd server && go get . && timeout 10 go run . || [[ $? -eq 124 ]]
+
+

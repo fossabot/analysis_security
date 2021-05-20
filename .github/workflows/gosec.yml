@@ -1,0 +1,23 @@
+name: Run Gosec
+
+on: [push, pull_request_target]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    env:
+      GO111MODULE: on
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v2
+      - name: Run Gosec Security Scanner
+        uses: securego/gosec@master
+        with:
+          args: '-no-fail -fmt=html -out=results.html ./...'
+      - name: Upload GoSec results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: GoSec test results
+          path: results.html
+
