@@ -1,4 +1,6 @@
 # PV204_Noise_Protocol_and_TPM
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F2467c%2Fanalysis_security.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2F2467c%2Fanalysis_security?ref=badge_shield)
+
 
 
 Link to the [assignment](https://is.muni.cz/auth/el/fi/jaro2021/PV204/um/lectures/pv204_project_overview_2021.pdf).
@@ -120,3 +122,7 @@ OPTIONS:
    --help, -h                  show help (default: false)
 ```
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F2467c%2Fanalysis_security.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F2467c%2Fanalysis_security?ref=badge_large)
